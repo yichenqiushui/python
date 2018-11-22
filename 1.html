@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset="utf-8">
+  <title>Hello OpenCV.js</title>
+</head>
+ 
+<body>
+  <h2>Hello OpenCV.js</h2>
+  <div>
+    <div class="inputoutput">
+      <img id="imageSrc" alt="No Image" />
+      <div class="caption">imageSrc
+        <input type="file" id="fileInput" name="file" />
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    let imgElement = document.getElementById("imageSrc")
+    let inputElement = document.getElementById("fileInput");
+    inputElement.addEventListener("change", (e) => {
+      imgElement.src = URL.createObjectURL(e.target.files[0]);
+    }, false);
+  </script>
+</body>
+ 
+</html>
+--------------------- 
+作者：CommissarMa 
+来源：CSDN 
+原文：https://blog.csdn.net/u012343179/article/details/79485518 
+版权声明：本文为博主原创文章，转载请附上博文链接！
